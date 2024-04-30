@@ -1,4 +1,7 @@
 # Project Name
+Demo of the Project
+ 
+[https://youtu.be/6tUitOjmg9g](https://youtu.be/6tUitOjmg9g)
 
 This is a project that utilizes React for the frontend and Django REST Framework for the backend.
 
@@ -39,10 +42,7 @@ Navigate to the backend directory and perform the following steps:
    ```bash
    python manage.py runserver
    ```
-5. Demo of the Project
 
-   
-  [https://youtu.be/6tUitOjmg9g](https://youtu.be/6tUitOjmg9g)
    
 
 Now you're ready to start developing!
