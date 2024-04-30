@@ -1,0 +1,107 @@
+###user routes 
+
+
+POST http://127.0.0.1:8000/signup 
+Content-Type: application/json
+
+{ "username": "yaswanth", "password": "yaswanth", "email": "yas23@mail.com" ,"is_admin":"True"}
+
+###
+
+POST http://127.0.0.1:8000/login 
+Content-Type: application/json
+
+{ "username": "a12", "password": "a12" }
+
+###
+
+GET http://127.0.0.1:8000/test_token 
+Content-Type: application/json
+Authorization: token 04c020f590c1729685d23b343378ba7e367eacde
+
+###
+
+GET http://127.0.0.1:8000/test_admin_token
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+###
+
+POST http://127.0.0.1:8000/topics/
+Content-Type: application/json
+Authorization: token 04c020f590c1729685d23b343378ba7e367eacde
+
+{"name":"family"}
+
+###
+GET http://127.0.0.1:8000/topics/4
+Content-Type: application/json
+Authorization: token 526e41af3e3519c2ec2a9b78fdb7a9c045177294
+
+
+###
+GET http://127.0.0.1:8000/topics/
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+###
+
+PUT http://127.0.0.1:8000/topics/3/
+Content-Type: application/json
+Authorization: token 526e41af3e3519c2ec2a9b78fdb7a9c045177294
+
+{"name":"my family"}
+
+###delete particulat topic
+
+DELETE  http://127.0.0.1:8000/topics/3/
+Content-Type: application/json
+Authorization: token 526e41af3e3519c2ec2a9b78fdb7a9c045177294
+
+
+
+###get all rooms created by admin based on token
+
+GET http://127.0.0.1:8000/rooms/
+Content-Type: application/json
+Authorization: token 526e41af3e3519c2ec2a9b78fdb7a9c045177294
+
+### create room 
+
+POST http://127.0.0.1:8000/rooms/
+Content-Type: application/json
+Authorization: token 526e41af3e3519c2ec2a9b78fdb7a9c045177294
+
+{"topic":7 ,"name":"study group night 12pm"}
+
+
+### get all rooms
+
+GET http://127.0.0.1:8000/userrooms/
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+
+### retrive based on id
+
+GET http://127.0.0.1:8000/rooms/4
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+### update the room based on id
+PUT http://127.0.0.1:8000/rooms/2/
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+{"name":"Politics Group","topic":7}
+
+### delete the room based on id
+
+DELETE http://127.0.0.1:8000/rooms/2/
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+
+
+
+

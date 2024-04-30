@@ -1,0 +1,132 @@
+###user signup route
+
+
+POST http://127.0.0.1:8000/signup 
+Content-Type: application/json
+
+{ "username": "yaswanth", "password": "yaswanth", "email": "yas23@mail.com" ,"is_admin":"True"}
+
+### user login route
+
+POST http://127.0.0.1:8000/login 
+Content-Type: application/json
+
+{ "username": "yaswanth", "password": "yaswanth" }
+
+### test token admin
+
+GET http://127.0.0.1:8000/test_token 
+Content-Type: application/json
+Authorization: token 04c020f590c1729685d23b343378ba7e367eacde
+
+### testing admin token
+
+GET http://127.0.0.1:8000/test_admin_token
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+### create topic
+
+POST http://127.0.0.1:8000/topics/
+Content-Type: application/json
+Authorization: token 04c020f590c1729685d23b343378ba7e367eacde
+
+{"name":"family"}
+
+### get topic based on id
+
+GET http://127.0.0.1:8000/topics/4
+Content-Type: application/json
+Authorization: token 526e41af3e3519c2ec2a9b78fdb7a9c045177294
+
+
+### get all topics
+GET http://127.0.0.1:8000/topics/
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+### update topic
+
+PUT http://127.0.0.1:8000/topics/3/
+Content-Type: application/json
+Authorization: token 526e41af3e3519c2ec2a9b78fdb7a9c045177294
+
+{"name":"my family"}
+
+###delete particulatr based on id
+
+DELETE  http://127.0.0.1:8000/topics/3/
+Content-Type: application/json
+Authorization: token 526e41af3e3519c2ec2a9b78fdb7a9c045177294
+
+
+
+###get all rooms created by admin based on token
+
+GET http://127.0.0.1:8000/rooms/
+Content-Type: application/json
+Authorization: token 526e41af3e3519c2ec2a9b78fdb7a9c045177294
+
+### create room 
+
+POST http://127.0.0.1:8000/rooms/
+Content-Type: application/json
+Authorization: token 526e41af3e3519c2ec2a9b78fdb7a9c045177294
+
+{"topic":7 ,"name":"study group"}
+
+
+### get all rooms
+
+GET http://127.0.0.1:8000/userrooms/
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+
+### retrive based on id
+
+GET http://127.0.0.1:8000/rooms/4
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+### update the room based on id
+PUT http://127.0.0.1:8000/rooms/2/
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+{"name":"Politics Group","topic":7}
+
+### delete the room based on id
+
+DELETE http://127.0.0.1:8000/rooms/2/
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+### delete the room based on id
+
+
+GET http://127.0.0.1:8000/messages
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+### post  the messages  based room id
+
+POST  http://127.0.0.1:8000/messages/
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+{"room":"7","content":"hi uddesh"}
+
+
+### get all messages  on room id
+
+GET  http://127.0.0.1:8000/messages/room/7
+Content-Type: application/json
+Authorization: token 0d371300d656c33ef805ddb9e420c24cb42d12e2
+
+
+
+
+
+
+
