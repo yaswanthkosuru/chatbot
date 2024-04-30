@@ -39,10 +39,10 @@ Navigate to the backend directory and perform the following steps:
    ```bash
    python manage.py runserver
    ```
-5. Demo of the video
+5. Demo of the Project
 
-   ```bash
-  [ youtube link](https://youtu.be/6tUitOjmg9g)
-   ```
+   
+  [https://youtu.be/6tUitOjmg9g](https://youtu.be/6tUitOjmg9g)
+   
 
 Now you're ready to start developing!
